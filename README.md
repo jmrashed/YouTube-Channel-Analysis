@@ -85,7 +85,7 @@ YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/'
 
 5. Run the analysis script:
    ```bash
-   python analyze.py --channel_id UC_x5XG1OV2P6uZZ5b9F1mDg
+   python analyze.py --channel_id UCbCmjCuTUZos6Inko4u57UQ
    ```
 
 ## Usage
