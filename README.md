@@ -2,6 +2,24 @@
 
 This project aims to analyze the content of YouTube channels to gain insights into various aspects such as video engagement, trends, audience demographics, and content performance. The project will leverage Python and various libraries to interact with the YouTube API, scrape video data, and provide meaningful analytics for YouTube content creators or marketers.
 
+# YouTube Channel Analysis
+
+![Build Status](https://img.shields.io/github/workflow/status/jmrashed/YouTube-Channel-Analysis/CI?label=build)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Latest Release](https://img.shields.io/github/v/release/jmrashed/YouTube-Channel-Analysis.svg)
+![Coverage Status](https://coveralls.io/repos/github/jmrashed/YouTube-Channel-Analysis/badge.svg)
+![Contributors](https://img.shields.io/github/contributors/jmrashed/YouTube-Channel-Analysis.svg)
+
+This project analyzes YouTube channels to extract data about video performance, audience engagement, and growth metrics.
+
+## Features
+
+- Fetches channel and video metrics.
+- Provides insights into audience engagement and video performance.
+- Tracks YouTube channel growth over time.
+
+
+
 <img src="Screenshot 2024-12-13 at 3.38.17 PM.png">
 
 ### Video Analytics Charts
