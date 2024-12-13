@@ -95,7 +95,7 @@ YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/'
 - After setting up the environment, you can start analyzing a YouTube channel by passing the channel ID or username to the script.
 - Example usage to analyze a channel by ID:
   ```bash
-  python analyze.py --channel_id UC_x5XG1OV2P6uZZ5b9F1mDg
+  python analyze.py --channel_id UCbCmjCuTUZos6Inko4u57UQ
   ```
 
 - The script will output detailed metrics, such as:

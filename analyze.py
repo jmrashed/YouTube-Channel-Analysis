@@ -69,13 +69,24 @@ def generate_markdown(channel_info, video_data):
     else:
         output += "No valid videos found.\n\n"
     
-    # Generate Likes to Views Ratio Chart
+    # Generate various charts
     if video_data:
-        output += "### Likes to Views Ratio (Chart)\n"
-        output += "Below is the chart showing the Likes to Views Ratio for each valid video.\n\n"
+        output += "### Video Analytics Charts\n"
         
-        # Create the plot for the ratio
+        # Create and save various charts
         plot_video_performance(video_data)
+        plt.savefig('video_performance.png')
+        output += "![Video Performance](video_performance.png)\n"
+
+        plot_likes_vs_views(video_data)
+        plt.savefig('likes_vs_views.png')
+        output += "![Likes vs Views](likes_vs_views.png)\n"
+
+        plot_comments(video_data)
+        plt.savefig('comments_chart.png')
+        output += "![Comments](comments_chart.png)\n"
+
+        plot_likes_to_views_ratio(video_data)
         plt.savefig('likes_to_views_ratio.png')
         output += "![Likes to Views Ratio](likes_to_views_ratio.png)\n"
 
@@ -84,13 +95,40 @@ def generate_markdown(channel_info, video_data):
 # Function to plot video performance (Views vs Likes)
 def plot_video_performance(video_data):
     df = pd.DataFrame(video_data)
-    df['Likes to Views Ratio'] = df['likes'] / df['views']
-        
+    df = df.sort_values(by="views", ascending=False).head(10)
     plt.figure(figsize=(10, 6))
-    plt.barh(df['title'], df['Likes to Views Ratio'], color='skyblue')
+    plt.barh(df['title'], df['views'], color='skyblue')
+    plt.xlabel('Views')
+    plt.title('Top 10 Videos by Views')
+
+# Function to plot Likes vs Views
+def plot_likes_vs_views(video_data):
+    df = pd.DataFrame(video_data)
+    df = df.sort_values(by="views", ascending=False).head(10)
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df['views'], df['likes'], color='green')
+    plt.xlabel('Views')
+    plt.ylabel('Likes')
+    plt.title('Likes vs Views for Top 10 Videos')
+
+# Function to plot comments distribution
+def plot_comments(video_data):
+    df = pd.DataFrame(video_data)
+    df = df.sort_values(by="views", ascending=False).head(10)
+    plt.figure(figsize=(10, 6))
+    plt.barh(df['title'], df['comments'], color='orange')
+    plt.xlabel('Comments')
+    plt.title('Top 10 Videos by Comments')
+
+# Function to plot Likes to Views Ratio
+def plot_likes_to_views_ratio(video_data):
+    df = pd.DataFrame(video_data)
+    df['Likes to Views Ratio'] = df['likes'] / df['views']
+    df = df.sort_values(by="Likes to Views Ratio", ascending=False).head(10)
+    plt.figure(figsize=(10, 6))
+    plt.barh(df['title'], df['Likes to Views Ratio'], color='purple')
     plt.xlabel('Likes to Views Ratio')
-    plt.title('Likes to Views Ratio of YouTube Videos')
-    plt.tight_layout()
+    plt.title('Likes to Views Ratio of Top 10 Videos')
 
 # Function to analyze channel and videos
 def analyze_channel(channel_id):
