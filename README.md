@@ -4,6 +4,14 @@ This project aims to analyze the content of YouTube channels to gain insights in
 
 <img src="Screenshot 2024-12-13 at 3.38.17 PM.png">
 
+### Video Analytics Charts
+
+![Video Performance](video_performance.png)
+![Likes vs Views](likes_vs_views.png)
+![Comments](comments_chart.png)
+![Likes to Views Ratio](likes_to_views_ratio.png)
+
+
 ## Features
 
 - **Video Metrics Analysis**: Extract key metrics such as views, likes, dislikes, comments, and more.
