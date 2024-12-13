@@ -7,12 +7,6 @@ This project aims to analyze the content of YouTube channels to gain insights in
 ![Build Status](https://img.shields.io/github/workflow/status/jmrashed/YouTube-Channel-Analysis/CI?label=build)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Latest Release](https://img.shields.io/github/v/release/jmrashed/YouTube-Channel-Analysis.svg)
-
-
-
-![Build Status](https://img.shields.io/github/workflow/status/jmrashed/YouTube-Channel-Analysis/CI?label=build)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Latest Release](https://img.shields.io/github/v/release/jmrashed/YouTube-Channel-Analysis.svg)
 ![Coverage Status](https://coveralls.io/repos/github/jmrashed/YouTube-Channel-Analysis/badge.svg)
 ![Contributors](https://img.shields.io/github/contributors/jmrashed/YouTube-Channel-Analysis.svg)
 
