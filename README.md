@@ -2,6 +2,8 @@
 
 This project aims to analyze the content of YouTube channels to gain insights into various aspects such as video engagement, trends, audience demographics, and content performance. The project will leverage Python and various libraries to interact with the YouTube API, scrape video data, and provide meaningful analytics for YouTube content creators or marketers.
 
+<img src="Screenshot 2024-12-13 at 3.38.17 PM.png">
+
 ## Features
 
 - **Video Metrics Analysis**: Extract key metrics such as views, likes, dislikes, comments, and more.
